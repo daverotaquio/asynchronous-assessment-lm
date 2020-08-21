@@ -21,9 +21,9 @@ namespace asynchronous_assessment_lm
             Coffee cup = PourCoffee();
             Console.WriteLine("Coffee is ready");
 
-            taskList.Add(Task.Run(() => FryEggs(2)));
-            taskList.Add(Task.Run(() => FryBacon(3)));
-            taskList.Add(Task.Run(() => ToastBreadAndPutButterAndJam(2)));
+            taskList.Add(FryEggs(2));
+            taskList.Add(FryBacon(3));
+            taskList.Add(ToastBreadAndPutButterAndJam(2));
 
             await Task.WhenAll(taskList);
             Console.WriteLine("Eggs are ready");
